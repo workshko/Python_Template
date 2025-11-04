@@ -9,7 +9,7 @@ git clone https://github.com/pmj-chosim/Python_Template.git
 ```
 만약, 환경이 없다면 아래 단계를 차례대로 수행해 주세요.  
 
-(https://github.com/pmj-chosim/Python_Template)[https://github.com/pmj-chosim/Python_Template]에 접속합니다.  
+[https://github.com/pmj-chosim/Python_Template](https://github.com/pmj-chosim/Python_Template)에 접속합니다.  
 이후, fork 버튼을 누르고 create fork 버튼을 클릭합니다.  
 <img width="1507" height="442" alt="image" src="https://github.com/user-attachments/assets/ad15647d-bb09-4b78-8fb6-a62adf85a8bc" />  
 <img width="967" height="745" alt="image" src="https://github.com/user-attachments/assets/58edeacc-8347-4db8-b45e-0d4eb9518b6a" />  
