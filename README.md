@@ -100,10 +100,61 @@ IntelliJ(PyCharm)에서 우측의 GitHub Copilot 버튼을 눌러 채팅을 엽�
 ```
 <img width="1447" height="368" alt="image" src="https://github.com/user-attachments/assets/03c535c1-53d7-44bf-a073-ad8a69952f95" />    
 <img width="486" height="783" alt="image" src="https://github.com/user-attachments/assets/df670aa7-1b88-4481-a3df-bbab2d21a9e7" />  
-라고 채팅창에 입력합니다. 채팅 창에 코드를 제시하며 설명을 해줄 것입니다.  
+라고 채팅창에 입력합니다. 채팅 창에 코드를 제시해 줄 것입니다.      
+<img width="507" height="777" alt="image" src="https://github.com/user-attachments/assets/ccc73667-d245-4e8d-99e1-975ceb392c4f" />  
+
   
-`Agent` 모드로 바꾼 다음 동일한 질문을 해보겠습니다. `Agent` 모드로 바꾼 후
+`Agent` 모드로 바꾼 다음 동일한 질문을 해보겠습니다. `Agent` 모드로 바꾼 후  
+
+```bash
+계산기 기능을 가진 python 어플리케이션을 만들어 주세요
+```
+
+<img width="1478" height="784" alt="image" src="https://github.com/user-attachments/assets/8a229d84-836b-4b6d-b70d-45d9a96bba89" />   
+<img width="1478" height="784" alt="image" src="https://github.com/user-attachments/assets/69249064-c84d-43dd-ae17-830bc6850c14" />  
+
+
+다시 동일한 질문을 같이 해보았습니다.
+
+`Ask` 모드는 채팅창에서 코드나 답을 제시했었습니다. 이와 달리 `Agent` 모드에선 "계산기 앱 만들어 줘"라고 하면 main.py 파일에 계산기 코드를 넣어 줍니다. 그냥 구경하는 게 아니라 직접 일을 해주는 `Agent`처럼 동작합니다.
+
+지금과 같이 `main.py` 하나만 있는 간단한 프로젝트는 물론이고, 파일이 여러 개 섞여서 머리 아픈 복잡한 프로젝트도 문제없이 수정해줍니다. `Agent` 모드는 여러 내용들을 쫙 훑어보고 어디를 어떻게 고쳐야 할지 스스로 판단해서 여러 파일을 넘나들며 수정해주기 때문입니다.  
+
+`Edit` 모드도 사용해보겠습니다. 채팅에서 `Edit`을 선택해 모드를 변경하려고 하면, 변경 사항을 저장할지 묻는 팝업이 뜰 수 있습니다. `Discard` 버튼을 누릅니다.    
+<img width="502" height="770" alt="image" src="https://github.com/user-attachments/assets/552287ac-4046-403a-87f2-007e861b261a" />  
+
+<img width="1448" height="762" alt="image" src="https://github.com/user-attachments/assets/ff6bfb2a-ece2-438e-8df0-04fab4ce3f60" />
+
+
+클립 버튼을 누른 후, `main.py` 파일을 선택합니다. `main.py` 파일을 더블 클릭하면 파일을 추가할 수 있습니다. 
+<img width="463" height="158" alt="image" src="https://github.com/user-attachments/assets/7768b65c-c990-4a48-a2a5-0efad4d9e2a4" />  
+<img width="1063" height="821" alt="image" src="https://github.com/user-attachments/assets/499d80e5-414f-4705-bbf8-89a7d6b5f469" />  
+
+
+그 다음 채팅창에
+```bash
+계산기 기능을 확장해 주세요  
+```
+<img width="486" height="167" alt="image" src="https://github.com/user-attachments/assets/08dd8a03-c909-4ade-b674-5575fe4ba38c" />  
+이 질문을 다시 붙여 넣고 물어 보겠습니다.  
+
+아까 선택했던 `main.py`의 코드들을 수정하는 제안을 보여줄 것입니다. Accept All 버튼을 눌러 수정 제안을 받아 들입니다.  
+<img width="1523" height="782" alt="image" src="https://github.com/user-attachments/assets/01d9651c-7866-473e-87fb-8c141d25286b" />  
+
+
+`Edit`에서는 선택한 main.py 코드에서 필요한 부분만 수정했을 것입니다. 반면, `Agent`도 작업 공간의 코드를 변경했습니다. 다만, 사용자가 따로 파일을 지정하지 않아도 스스로 필요한 파일을 찾아 여러 파일을 넘나들며 수정한다는 점에서 차이가 있습니다.  
+
+채팅 뷰의 3가지 모드에 대해서 살펴 보았습니다. `Ask` 모드는 채팅창에서 코드나 답을 제시하는 역할을 합니다. `Agent` 모드는 여러 코드들을 이해하고 코드를 직접 수정해줍니다. 더불어, 코드 작성뿐만 아니라 필요한 라이브러리 설치(예: pip install...) 등과 같은 환경 설정까지, 다양한 작업을 처리해주는 실제 대행자처럼 동작합니다. 그리고 `Edit` 모드는 사용자가 지정한 파일에 대해서 또는 `Agent` 보다는 좁은 맥락에서 코드를 수정한다는 차이점이 있었습니다.  
+
+
+- 인라인 채팅  
+인라인 채팅은 코드를 작성하는 도중에 바로 코드 편집기 안에서 코파일럿과 대화하는 기능입니다. 별도의 채팅 창을 열지 않고도 특정 코드 블록이나 함수 옆에서 곧바로 질문하고 답변을 받을 수 있습니다.  
+
+예를 들어, 어떤 함수의 기능이 궁금할 때, 그 함수 위에 커서를 두고 인라인 채팅을 활성화해서 "이 함수는 무슨 역할을 해?"라고 물어볼 수 있습니다. 그러면 코파일럿이 바로 옆에 답변을 띄워주는 식으로 동작합니다.  
+
+이 기능은 코딩 흐름을 끊지 않고 필요한 정보를 얻거나, 코드 수정에 대한 도움을 받고 싶을 때 매우 유용합니다.  
  
+
 
   
 
